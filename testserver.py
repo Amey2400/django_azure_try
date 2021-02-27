@@ -30,7 +30,6 @@ from PySpice.Unit import *
 import warnings
 warnings.filterwarnings("ignore")
 def sample():
-  print('hello')
   outputplot.objects.update_or_create(id=20, x="helloPython")
 
 
