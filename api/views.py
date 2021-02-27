@@ -8,7 +8,8 @@ from django.http import HttpResponse
 import sys
 from subprocess import run,PIPE
 from django.http import HttpResponse
-from ..testserver import sample
+sys.path.append("..")
+from testserver import sample
 
 
 class outputplotViewSet(viewsets.ModelViewSet):
