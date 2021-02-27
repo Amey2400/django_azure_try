@@ -20,14 +20,14 @@ class outputplotViewSet(viewsets.ModelViewSet):
     serializer_class = outputplotSerializer
 
 def senddata_topython():
-    outputplot_data=outputplot.objects.all()
-    serializer=outputplotSerializer(outputplot_data,many=True)
-    print(serializer.data)
-    temp=[]
-    for i in serializer.data:
-        x=i['x']
-        temp.append(x)
-    print(temp)
+    # outputplot_data=outputplot.objects.all()
+    # serializer=outputplotSerializer(outputplot_data,many=True)
+    # print(serializer.data)
+    # temp=[]
+    # for i in serializer.data:
+    #     x=i['x']
+    #     temp.append(x)
+    # print(temp)
 
     seq=""
     ip_values=""
@@ -45,7 +45,7 @@ def senddata_topython():
     #print(type(seq),type(ip_values))
     #Run python script pass input and get the output
     #out = run([sys.executable,'C:\\Users\\amey sonje\\deploy_angular_django_test\\deploytestserver\\testserver.py', temp],shell=False,stdout=PIPE)
-    #out = sample()
+    sample()
 
     #out1=out.stdout.decode("utf-8")
     #print(out1)
