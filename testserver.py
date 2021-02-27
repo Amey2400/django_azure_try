@@ -1,7 +1,7 @@
 from django.conf import settings
 import deploytestserver.settings as app_settings
 
-settings.configure(INSTALLED_APPS=app_settings.INSTALLED_APPS,DATABASES=app_settings.DATABASES)
+#settings.configure(INSTALLED_APPS=app_settings.INSTALLED_APPS,DATABASES=app_settings.DATABASES)
 
 import django
 django.setup()
