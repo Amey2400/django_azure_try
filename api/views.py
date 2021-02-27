@@ -8,7 +8,7 @@ from django.http import HttpResponse
 import sys
 from subprocess import run,PIPE
 from django.http import HttpResponse
-
+from ..testserver import sample
 
 
 class outputplotViewSet(viewsets.ModelViewSet):
@@ -18,7 +18,7 @@ class outputplotViewSet(viewsets.ModelViewSet):
     queryset = outputplot.objects.all()
     serializer_class = outputplotSerializer
 
-def senddata_topython(request):
+def senddata_topython():
     outputplot_data=outputplot.objects.all()
     serializer=outputplotSerializer(outputplot_data,many=True)
     print(serializer.data)
@@ -27,6 +27,7 @@ def senddata_topython(request):
         x=i['x']
         temp.append(x)
     print(temp)
+
     seq=""
     ip_values=""
     #for i in serializer.data:
@@ -42,7 +43,9 @@ def senddata_topython(request):
     #print(seq,ip_values)
     #print(type(seq),type(ip_values))
     #Run python script pass input and get the output
-    out = run([sys.executable,'C:\\Users\\amey sonje\\deploy_angular_django_test\\deploytestserver\\testserver.py', temp],shell=False,stdout=PIPE)
+    #out = run([sys.executable,'C:\\Users\\amey sonje\\deploy_angular_django_test\\deploytestserver\\testserver.py', temp],shell=False,stdout=PIPE)
+    out = sample(temp)
+
     out1=out.stdout.decode("utf-8")
     print(out1)
     outputplot.objects.all().delete()

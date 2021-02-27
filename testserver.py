@@ -29,10 +29,11 @@ from PySpice.Unit import *
 #to avoid warnings
 import warnings
 warnings.filterwarnings("ignore")
-
-temp = []
-circuit = Circuit('circuit')
-temp1 = sys.argv[1]
-for i in range(len(temp1)):
-    temp.append(temp1[i])
-print(str(temp)+'world')
+def sample():
+  temp = []
+  circuit = Circuit('circuit')
+  temp1 = sys.argv[1]
+  for i in range(len(temp1)):
+      temp.append(temp1[i])
+  print(str(temp)+'world')
+  return(str(temp)+'world')
