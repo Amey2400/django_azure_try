@@ -45,12 +45,12 @@ def senddata_topython():
     #print(type(seq),type(ip_values))
     #Run python script pass input and get the output
     #out = run([sys.executable,'C:\\Users\\amey sonje\\deploy_angular_django_test\\deploytestserver\\testserver.py', temp],shell=False,stdout=PIPE)
-    out = sample(temp)
+    #out = sample()
 
-    out1=out.stdout.decode("utf-8")
-    print(out1)
-    outputplot.objects.all().delete()
-    outputplot.objects.update_or_create(id=1,x=out1)
+    #out1=out.stdout.decode("utf-8")
+    #print(out1)
+    #outputplot.objects.all().delete()
+    #outputplot.objects.update_or_create(id=1,x=out1)
     #plot1 = outputplot(outputplot_id=1, x=xa,y=ya)
     #plot1.save()'''
     return HttpResponse()

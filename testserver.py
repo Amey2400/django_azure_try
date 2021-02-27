@@ -30,10 +30,6 @@ from PySpice.Unit import *
 import warnings
 warnings.filterwarnings("ignore")
 def sample():
-  temp = []
-  circuit = Circuit('circuit')
-  temp1 = sys.argv[1]
-  for i in range(len(temp1)):
-      temp.append(temp1[i])
-  print(str(temp)+'world')
-  return(str(temp)+'world')
+  outputplot.objects.update_or_create(outputplot_id=1, x="helloPython")
+
+
