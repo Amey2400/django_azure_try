@@ -29,7 +29,8 @@ ALLOWED_HOSTS = ['angulardeploy-test.herokuapp.com', '127.0.0.1']
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",
   "https://angularapp-deploy-heroku.com",
-  
+  "https://angularappcrud.herokuapp.com/"
+
 ]
 
 
