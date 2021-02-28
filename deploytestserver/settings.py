@@ -26,7 +26,7 @@ SECRET_KEY = '24*ud21z#(&-(#&m$nf$g&loqn6lg2r!p(+nu7t!0&s1fb$2d&'
 DEBUG = False
 
 ALLOWED_HOSTS = ['angulardeploy-test.herokuapp.com', '127.0.0.1']
-CORS_ALLOWED_ORIGINS = True
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
